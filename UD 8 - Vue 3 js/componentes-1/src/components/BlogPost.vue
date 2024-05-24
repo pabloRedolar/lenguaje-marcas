@@ -1,8 +1,8 @@
 <script setup>
+/* Importamos la función ref de Vue para crear referencias reactivas */
 import { ref } from 'vue';
 
-
-//defineProps(['titulo', 'body', 'id', 'colorText']);
+/* Definimos las propiedades esperadas por el componente */
 defineProps({
     titulo: String,
     id: Number,
@@ -12,17 +12,20 @@ defineProps({
     }
 });
 
+/* Definimos los eventos que el componente puede emitir */
 const emit = defineEmits(['cambiarNombreFavorito']);
-
 </script>
 
+
 <template>
+    <!-- Estructura del componente de tarjeta -->
     <div class="card">
         <div class="card-body">
-            <!--<h5 class="card-title" :class="`text-${colorText}`"> {{ id }} - {{ titulo }}</h5>-->
-            <h5> {{ id }} - {{ titulo }}</h5>
+            <!-- Mostramos el título y el cuerpo del post -->
+            <h5>{{ id }} - {{ titulo }}</h5>
             <p>{{ body }}</p>
-            <!-- Aqui tengo que emitir ese metodo, y para ello tengo la palabra reservada emit. -->
+            
+            <!-- Botón para marcar como favorito -->
             <button class="btn btn-outline-primary" @click="emit('cambiarNombreFavorito', titulo )">Favorito</button>
         </div>
     </div>

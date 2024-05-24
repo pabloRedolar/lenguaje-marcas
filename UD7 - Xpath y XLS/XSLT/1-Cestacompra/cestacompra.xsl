@@ -9,11 +9,7 @@
     resultados.
     priority es opcional e indica la prioridad que tendrá el template
     -->
-<<<<<<< HEAD:UD7 - Xpath/XSLT/1-Cestacompra/cestacompra.xsl
     <xsl:template match="/" >
-=======
-    <xsl:template match="/*">
->>>>>>> 7a786937301e479462f464a4007adef6d5a780f6:UD7 - Xpath/XSLT/cestacompra.xsl
         <!-- Aquí creamos el documento HTML -->
         <html lang="es">
             <head>

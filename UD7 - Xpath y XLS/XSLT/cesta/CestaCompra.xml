@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="Cestacompra.xsl" type="text/xsl"?>
+<cesta>
+    <producto idproducto="001">
+            <nombre>Manzana Golden</nombre>
+            <origen>Ademuz</origen> 
+            <cantidad>20</cantidad>
+            <coste>14.5</coste>
+    </producto>
+    <producto idproducto="002">
+        <nombre>Pera</nombre>
+        <origen>Torrebaja</origen> 
+        <cantidad>32</cantidad>
+        <coste>12.0</coste>
+    </producto>
+    <producto idproducto="003">
+        <nombre>Mango</nombre>
+        <origen>Republica Dominicana</origen> 
+        <cantidad>10</cantidad>
+        <coste>18.5</coste>
+    </producto>
+</cesta>
