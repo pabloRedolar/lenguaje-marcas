@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+<!ELEMENT biblioteca (libros, miembros, prestamos)+>
+
+<!ELEMENT libros (libro*)>
+<!ELEMENT libro (titulo, autor+, categoria, fecha_publicacion, isbn, paginas, editorial)>
+<!ATTLIST libro
+    id ID #REQUIRED
+    idioma CDATA #IMPLIED>
+
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (nombre, nacionalidad?, fecha_nacimiento?, fecha_fallecimiento?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT nacionalidad (#PCDATA)>
+<!ELEMENT fecha_nacimiento (#PCDATA)>
+<!ELEMENT fecha_fallecimiento (#PCDATA)>
+
+<!ELEMENT categoria (#PCDATA)>
+<!ELEMENT fecha_publicacion (#PCDATA)>
+<!ELEMENT isbn (#PCDATA)>
+<!ELEMENT paginas (#PCDATA)>
+<!ELEMENT editorial (nombre, direccion)>
+<!ELEMENT direccion (#PCDATA)>
+
+<!ELEMENT miembros (miembro*)>
+<!ELEMENT miembro (nombre, direccion, telefono, email?, fecha_registro, libros_prestados?)>
+<!ATTLIST miembro
+    id ID #REQUIRED
+    tipo (estudiante | profesor | externo) "externo">
+
+<!ELEMENT fecha_registro (#PCDATA)>
+<!ELEMENT libros_prestados (libro_ref*)>
+<!ELEMENT libro_ref EMPTY>
+<!ATTLIST libro_ref
+    refid IDREF #REQUIRED>
+
+<!ELEMENT prestamos (prestamo*)>
+<!ELEMENT prestamo (miembro_ref, libro_ref, fecha_prestamo, fecha_devolucion?)>
+<!ATTLIST prestamo
+    id ID #REQUIRED>
+
+<!ELEMENT miembro_ref EMPTY>
+<!ATTLIST miembro_ref
+    refid IDREF #REQUIRED>
+
+<!ELEMENT fecha_prestamo (#PCDATA)>
+<!ELEMENT fecha_devolucion (#PCDATA)>
+
+<!ELEMENT contenido (texto | imagen | video)>
+<!ELEMENT texto (#PCDATA)>
+<!ELEMENT imagen (url, descripcion?)>
+<!ELEMENT video (url, duracion)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT duracion (#PCDATA)>
+]>
+
+
+<biblioteca>
+    <libros>
+        <libro id="b1" idioma="Español">
+            <titulo>El Quijote</titulo>
+            <autor>
+                <nombre>Miguel de Cervantes</nombre>
+                <nacionalidad>Española</nacionalidad>
+                <fecha_nacimiento>1547-09-29</fecha_nacimiento>
+                <fecha_fallecimiento>1616-04-23</fecha_fallecimiento>
+            </autor>
+            <categoria>Novela</categoria>
+            <fecha_publicacion>1605</fecha_publicacion>
+            <isbn>978-3-16-148410-0</isbn>
+            <paginas>863</paginas>
+            <editorial>
+                <nombre>Editorial XYZ</nombre>
+                <direccion>Calle Falsa 123</direccion>
+            </editorial>
+        </libro>
+        <libro id="b2">
+            <titulo>Cien Años de Soledad</titulo>
+            <autor>
+                <nombre>Gabriel García Márquez</nombre>
+                <nacionalidad>Colombiana</nacionalidad>
+                <fecha_nacimiento>1927-03-06</fecha_nacimiento>
+                <fecha_fallecimiento>2014-04-17</fecha_fallecimiento>
+            </autor>
+            <categoria>Realismo Mágico</categoria>
+            <fecha_publicacion>1967</fecha_publicacion>
+            <isbn>978-0-14-118499-9</isbn>
+            <paginas>417</paginas>
+            <editorial>
+                <nombre>Editorial ABC</nombre>
+                <direccion>Avenida Siempre Viva 742</direccion>
+            </editorial>
+        </libro>
+    </libros>
+    <miembros>
+        <miembro id="m1" tipo="estudiante">
+            <nombre>Juan Pérez</nombre>
+            <direccion>Calle Falsa 123</direccion>
+            <telefono>555-1234</telefono>
+            <email>juan.perez@example.com</email>
+            <fecha_registro>2020-01-15</fecha_registro>
+            <libros_prestados>
+                <libro_ref refid="b1"/>
+            </libros_prestados>
+        </miembro>
+        <miembro id="m2" tipo="profesor">
+            <nombre>Maria López</nombre>
+            <direccion>Avenida Siempre Viva 742</direccion>
+            <telefono>555-5678</telefono>
+            <fecha_registro>2019-09-10</fecha_registro>
+        </miembro>
+    </miembros>
+    <prestamos>
+        <prestamo id="p1">
+            <miembro_ref refid="m1"/>
+            <libro_ref refid="b1"/>
+            <fecha_prestamo>2024-05-01</fecha_prestamo>
+            <fecha_devolucion>2024-05-15</fecha_devolucion>
+        </prestamo>
+    </prestamos>
+    <contenido>
+        <texto>Esto es un contenido de texto.</texto>
+    </contenido>
+    <contenido>
+        <imagen>
+            <url>http://example.com/imagen.jpg</url>
+            <descripcion>Una imagen descriptiva.</descripcion>
+        </imagen>
+    </contenido>
+    <contenido>
+        <video>
+            <url>http://example.com/video.mp4</url>
+            <duracion>120</duracion>
+        </video>
+    </contenido>
+</biblioteca>

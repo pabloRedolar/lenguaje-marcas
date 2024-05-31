@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE trabajadores [
+  <!ELEMENT trabajadores (trabajador+)>
+  <!ELEMENT trabajador ((numero | clave)*, nombre, edad*)>
+  <!ELEMENT clave (#PCDATA)>
+  <!ELEMENT edad (#PCDATA)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT numero (#PCDATA)>
+]>
+
+<trabajadores>
+  <trabajador>
+    <nombre>Ana</nombre>
+    <edad>21</edad>
+  </trabajador>
+  <trabajador>
+    <numero>598</numero>
+    <nombre>Iker</nombre>
+    <edad>19</edad>
+  </trabajador>
+  <trabajador>
+    <clave>hY75Du</clave>
+    <nombre>Iker</nombre>
+  </trabajador>
+</trabajadores>

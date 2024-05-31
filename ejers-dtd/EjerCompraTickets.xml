@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE compra [
+    <!ELEMENT compra (ticket)>
+    <!ELEMENT ticket (fechaHora, precioTotal, formaPago, datosComercio, datosCompra)>
+    <!ATTLIST ticket codigo ID #REQUIRED>
+    <!ELEMENT fechaHora (#PCDATA)>
+
+    <!ELEMENT precioTotal (precioSinIVA, cantidadIVA, PVP)>
+    <!ATTLIST precioTotal tipoMoneda ID #REQUIRED>
+    <!ELEMENT precioSinIVA (#PCDATA)>
+    <!ELEMENT cantidadIVA (#PCDATA)>
+    <!ELEMENT PVP (#PCDATA)>
+
+    <!ELEMENT formaPago (#PCDATA)>
+    <!ATTLIST formaPago tipoTarjeta CDATA #IMPLIED>
+    <!ATTLIST formaPago numeroTarjeta CDATA #IMPLIED>
+    <!ATTLIST formaPago nombreCliente CDATA #REQUIRED>
+    <!ELEMENT nombreCliente (#PCDATA)>
+
+    <!ELEMENT datosComercio (nombre, direccionCompleta, cif, telefono)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT direccionCompleta (#PCDATA)>
+    <!ELEMENT cif (#PCDATA)>
+    <!ELEMENT telefono (#PCDATA)>
+
+    <!ELEMENT datosCompra (lineasCompra+)>
+    <!ELEMENT lineasCompra (nombreArticulo, cantidad, precioUnitario, iva, precioConIva)>
+    <!ELEMENT nombreArticulo (#PCDATA)>
+    <!ELEMENT cantidad (#PCDATA)>
+    <!ELEMENT precioUnitario (#PCDATA)>
+    <!ELEMENT iva (#PCDATA)>
+    <!ELEMENT precioConIva (#PCDATA)>
+]>
+
+<compra>
+    <ticket codigo="T001">
+        <fechaHora>2024-05-31T14:30:00</fechaHora>
+        <precioTotal tipoMoneda="euro">
+            <precioSinIVA>50.00</precioSinIVA>
+            <cantidadIVA>10.00</cantidadIVA>
+            <PVP>60.00</PVP>
+        </precioTotal>
+        <formaPago tipoTarjeta="credito" numeroTarjeta="1234567890123456" nombreCliente="Juan Pérez">
+            tarjeta
+        </formaPago>
+        <datosComercio>
+            <nombre>Tienda de Ejemplo</nombre>
+            <direccionCompleta>Calle Falsa 123, Madrid, España</direccionCompleta>
+            <cif>A12345678</cif>
+            <telefono>912345678</telefono>
+        </datosComercio>
+        <datosCompra>
+            <lineasCompra>
+                <nombreArticulo>Artículo 1</nombreArticulo>
+                <cantidad>2</cantidad>
+                <precioUnitario>20.00</precioUnitario>
+                <iva>4.00</iva>
+                <precioConIva>24.00</precioConIva>
+            </lineasCompra>
+            <lineasCompra>
+                <nombreArticulo>Artículo 2</nombreArticulo>
+                <cantidad>1</cantidad>
+                <precioUnitario>10.00</precioUnitario>
+                <iva>2.00</iva>
+                <precioConIva>12.00</precioConIva>
+            </lineasCompra>
+        </datosCompra>
+    </ticket>
+</compra>

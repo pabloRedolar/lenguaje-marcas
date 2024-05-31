@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE estrellas [
+  <!ELEMENT estrellas (estrella)+>
+  <!ELEMENT estrella EMPTY>
+  <!ATTLIST estrella numero ID #REQUIRED>
+  <!ATTLIST estrella nombre CDATA #REQUIRED>
+  <!ATTLIST estrella planeta CDATA #IMPLIED>
+]>
+
+<estrellas>
+  <estrella numero="N234" nombre="Galatea" />
+  <estrella numero="N479" nombre="Mimas" planeta="Saturno" />
+  <estrella numero="N566" nombre="Diode" planeta="Saturno" />
+  <estrella numero="N607" nombre="Miranda" planeta="Urano" />
+</estrellas>

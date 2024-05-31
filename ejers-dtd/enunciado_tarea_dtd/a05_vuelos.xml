@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE aeropuerto [
+    <!ELEMENT aeropuerto (nombre, vuelo, fecha)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT vuelo (#PCDATA)>
+    <!ATTLIST vuelo codigo ID #REQUIRED>
+    <!ATTLIST vuelo estado (C | E | R) "E">
+    <!ELEMENT fecha (#PCDATA)>
+    <!ELEMENT semanale EMPTY>
+]>
+
+<aeropuerto>
+    <nombre>Aeropuerto Internacional</nombre>
+    <vuelo codigo="V1" estado="E">Vuelo 1</vuelo>
+    <fecha>2024-05-30</fecha>
+</aeropuerto>

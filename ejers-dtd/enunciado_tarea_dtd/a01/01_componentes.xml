@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE componentes [
+<!ELEMENT componentes (componente+)>
+    <!ELEMENT componente (#PCDATA)>
+]>
+
+<componentes>
+  <componente>memoria RAM</componente>
+  <componente>placa base</componente>
+  <componente>disco duro</componente>
+</componentes>

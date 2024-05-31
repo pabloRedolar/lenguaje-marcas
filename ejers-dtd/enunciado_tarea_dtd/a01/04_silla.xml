@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE silla [
+    <!ELEMENT silla ANY>
+    <!ELEMENT material (#PCDATA)>
+    <!ELEMENT color (#PCDATA)>
+    ]>
+
+<silla>La silla de <material>madera es de color <color>marrón</color></material>.</silla>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE despedidas [
+    <!ELEMENT despedidas (despedida*)>
+    <!ELEMENT despedida (#PCDATA)>
+    <!ATTLIST despedida idioma (ALE | FRA | ITA | POR | ESP) "ESP">
+    ]>
+
+<despedidas>
+  <despedida idioma="ALE">Hallo</despedida>
+  <despedida>Hola</despedida>
+  <despedida idioma="ITA">Ciao</despedida>
+  <despedida idioma="FRA">Salut</despedida>
+  <despedida idioma="POR">Olá</despedida>
+</despedidas>

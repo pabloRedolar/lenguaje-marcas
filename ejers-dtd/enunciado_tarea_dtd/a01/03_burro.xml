@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE burro [
+    <!ELEMENT burro (nombre, raza, edad)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT raza (#PCDATA)>
+    <!ELEMENT edad EMPTY>
+    ]>
+
+<burro>
+  <nombre>Rocinante</nombre>
+  <raza>Vaquero</raza>
+</burro>

@@ -6,11 +6,11 @@
         <xs:element name="ficha" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="nombre" type="xs:string"/>
+              <xs:element name="nombre" type="xs:string" />
               <xs:element name="iniciales" type="tresLetras" />
-              <xs:element name="edad" type="xs:integer"/>
+              <xs:element name="edad" type="xs:integer" />
               <xs:element name="iniciales-al-reves" type="tresLetras" />
-             </xs:sequence>
+            </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
@@ -18,10 +18,7 @@
   </xs:element>
   <xs:simpleType name="tresLetras">
     <xs:restriction base="xs:string">
-        <xs:pattern value="[a-zA-Z][a-zA-Z][a-zA-Z]"/>
+      <xs:pattern value="[a-zA-Z][a-zA-Z][a-zA-Z]" />
     </xs:restriction>
   </xs:simpleType>
-
-
-
 </xs:schema>

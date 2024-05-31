@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE facturas [
+    <!ELEMENT facturas (factura+)>
+    <!ELEMENT factura (emisor, cliente, detalles, importe)+>
+
+    <!ELEMENT emisor (nombre, cif, telefono)>
+    <!ELEMENT cliente (nombre, cif, telefono)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT cif (#PCDATA)>
+    <!ELEMENT telefono (#PCDATA)>
+
+    <!ELEMENT detalles (linea+)>
+    <!ELEMENT linea (descripcion, cantidad, reacondicionado?, pvp)>
+    <!ELEMENT descripcion (#PCDATA)>
+    <!ELEMENT cantidad (#PCDATA)>
+    <!ELEMENT reacondicionado EMPTY>
+    <!ELEMENT pvp (#PCDATA)>
+    <!ATTLIST linea codigo ID #REQUIRED>
+    <!ATTLIST linea tipo (libro | dvd | varios) #IMPLIED>
+
+    <!ELEMENT importe (#PCDATA)>
+
+    <!ATTLIST factura numero ID #REQUIRED>
+    <!ATTLIST factura fecha_emision CDATA #REQUIRED>
+]>
+
+<facturas>
+    <factura numero="F001" fecha_emision="2024-05-30">
+        <emisor>
+            <nombre>Empresa XYZ</nombre>
+            <cif>12345678A</cif>
+            <telefono>123456789</telefono>
+        </emisor>
+        <cliente>
+            <nombre>Cliente A</nombre>
+            <cif>87654321B</cif>
+            <telefono>987654321</telefono>
+        </cliente>
+        <detalles>
+            <linea codigo="L001" tipo="libro">
+                <descripcion>Libro de ejemplo 1</descripcion>
+                <cantidad>2</cantidad>
+                <pvp>20.00</pvp>
+            </linea>
+            <linea codigo="L002" tipo="dvd">
+                <descripcion>Película de prueba 1</descripcion>
+                <cantidad>1</cantidad>
+                <reacondicionado/>
+                <pvp>15.00</pvp>
+            </linea>
+        </detalles>
+        <importe>55.00</importe>
+    </factura>
+    <factura numero="F002" fecha_emision="2024-06-01">
+        <emisor>
+            <nombre>Empresa ABC</nombre>
+            <cif>98765432C</cif>
+            <telefono>987654321</telefono>
+        </emisor>
+        <cliente>
+            <nombre>Cliente B</nombre>
+            <cif>12345678D</cif>
+            <telefono>123456789</telefono>
+        </cliente>
+        <detalles>
+            <linea codigo="L003" tipo="varios">
+                <descripcion>Artículo varios 1</descripcion>
+                <cantidad>3</cantidad>
+                <pvp>10.00</pvp>
+            </linea>
+        </detalles>
+        <importe>30.00</importe>
+    </factura>
+</facturas>

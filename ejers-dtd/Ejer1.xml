@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bibliografia [
+    <!ELEMENT bibliografia (libro | articulo)*>
+    <!ELEMENT libro (titulo, autor+, volumen+, edicion, opinionPersonal)>
+
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT autor (#PCDATA)>
+
+    <!ELEMENT volumen (numero_paginas)>
+    <!ELEMENT numero_paginas (#PCDATA)>
+
+    <!ELEMENT edicion (editor, lugarEdicion, lugarImpresion, isbn)>
+    <!ELEMENT editor (#PCDATA)>
+    <!ELEMENT lugarEdicion (#PCDATA)>
+    <!ELEMENT lugarImpresion (#PCDATA)>
+    <!ELEMENT isbn (#PCDATA)>
+
+    <!ELEMENT articulo (titulo, autor+, revista, opinionPersonal)>
+    <!ELEMENT revista (#PCDATA)>
+
+    <!ELEMENT opinionPersonal (#PCDATA)>
+]>
+
+<bibliografia>
+    <libro>
+        <titulo>Introducción a la Programación</titulo>
+        <autor>Juan Pérez</autor>
+        <autor>Maria López</autor>
+        <volumen>
+            <numero_paginas>350</numero_paginas>
+        </volumen>
+        <volumen>
+            <numero_paginas>280</numero_paginas>
+        </volumen>
+        <edicion>
+            <editor>Editorial Alpha</editor>
+            <lugarEdicion>Madrid</lugarEdicion>
+            <lugarImpresion>Barcelona</lugarImpresion>
+            <isbn>978-3-16-148410-0</isbn>
+        </edicion>
+        <opinionPersonal>Es un libro fundamental para principiantes.</opinionPersonal>
+    </libro>
+    <articulo>
+        <titulo>Técnicas Avanzadas de Programación</titulo>
+        <autor>Carlos Rodríguez</autor>
+        <autor>Laura Martínez</autor>
+        <revista>Revista de Informática</revista>
+        <opinionPersonal>Un artículo muy completo y detallado.</opinionPersonal>
+    </articulo>
+</bibliografia>

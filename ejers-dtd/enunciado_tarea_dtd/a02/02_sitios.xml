@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sitios [
+    <!ELEMENT sitios (#PCDATA | sitio)*>
+    <!ELEMENT sitio (#PCDATA)>
+]>
+
+<sitios>En el <sitio>polo norte</sitio> hace mucho frío. Pero, en el <sitio>desierto del Sahara</sitio>hace mucho calor.</sitios>

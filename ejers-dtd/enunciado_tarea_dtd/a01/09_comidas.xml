@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE comidas [
+    <!ELEMENT comidas (bebida)*>
+    <!ELEMENT bebida ((codigo | nombre), precio)>
+    <!ELEMENT codigo (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+    ]>
+
+<comidas>
+  <bebida>
+    <codigo>L45</codigo>
+    <nombre>leche</nombre>
+    <precio>8</precio>
+  </bebida>
+  <bebida>
+    <precio>6</precio>
+  </bebida>
+</comidas>

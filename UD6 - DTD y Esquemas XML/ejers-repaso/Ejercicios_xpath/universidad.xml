@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<universidad>
+    <nombre>Universidad de Zaragoza</nombre>
+    <pais>España</pais>
+
+<!-- CARRERAS -->
+    <carreras>
+        <carrera id="c01">
+            <nombre>Ingeniería Informática</nombre>
+            <plan>2009</plan>
+            <creditos>250</creditos>
+            <centro>Escuela Politécnica Teruel</centro>
+        </carrera>
+        
+        <carrera id="c02">
+            <nombre>Empresariales</nombre>
+            <plan>2008</plan>
+            <creditos>275</creditos>
+            <centro>Facultad de Ciencias Sociales</centro>
+        </carrera>
+        
+        <carrera id="c03">
+            <nombre>Relaciones Laborales</nombre>
+            <plan>2001</plan>
+            <creditos>175</creditos>
+            <centro>Facultad de Ciencias Sociales</centro>
+            <subdirector>Alfonso Martín Salas</subdirector>
+        </carrera>
+    </carreras>
+    
+<!-- ASIGNATURAS -->
+    
+    <asignaturas>
+        
+        <asignatura id="a01" titulacion="c01">
+            <nombre>Ofimática</nombre>
+            <creditos_teoricos>3</creditos_teoricos>
+            <creditos_practicos>5</creditos_practicos>
+            <trimestre>1</trimestre>
+        </asignatura>
+        
+        <asignatura id="a02" titulacion="c01">
+            <nombre>Ingeniería del Software</nombre>
+            <creditos_teoricos>6</creditos_teoricos>
+            <creditos_practicos>3</creditos_practicos>
+            <trimestre>2</trimestre>
+        </asignatura>
+        
+        <asignatura id="a03" titulacion="c02">
+            <nombre>Derecho Internacional</nombre>
+            <creditos_teoricos>4</creditos_teoricos>
+            <creditos_practicos>2</creditos_practicos>
+            <trimestre>1</trimestre>
+        </asignatura>
+        
+        <asignatura id="a04" titulacion="c02">
+            <nombre>Administración de empresas</nombre>
+            <creditos_teoricos>4</creditos_teoricos>
+            <creditos_practicos>2</creditos_practicos>
+            <trimestre>1</trimestre>
+        </asignatura>
+        
+        <asignatura id="a05" titulacion="c03">
+            <nombre>Derecho </nombre>
+            <creditos_teoricos>3</creditos_teoricos>
+            <creditos_practicos>1.5</creditos_practicos>
+            <trimestre>2</trimestre>
+        </asignatura>
+    </asignaturas>
+    
+<!-- ALUMNOS -->
+    <alumnos>
+        
+        <alumno id="e01">
+            <apellido1>Sanz</apellido1>
+            <apellido2>Santos</apellido2>
+            <nombre>Víctor</nombre>
+            <sexo>Hombre</sexo>
+            <estudios>
+                <carrera codigo="c01"/>
+                <asignaturas>
+                    <asignatura codigo="a01"/>
+                    <asignatura codigo="a02"/>
+                </asignaturas>
+                <proyecto>Web del centro</proyecto>
+            </estudios>
+        </alumno>
+        
+        <alumno id="e02">
+            <apellido1>Vicente</apellido1>
+            <apellido2>Pérez</apellido2>
+            <nombre>Ángel</nombre>
+            <sexo>Hombre</sexo>
+            <estudios>
+                <carrera codigo="c02"/>
+                <asignaturas>
+                    <asignatura codigo="a03"/>
+                    <asignatura codigo="a04"/>
+                </asignaturas>
+            </estudios>
+        </alumno>
+        
+        <alumno id="e03" beca="si">
+            <apellido1>Sanz</apellido1>
+            <apellido2>Santos</apellido2>
+            <nombre>Víctor</nombre>
+            <sexo>Hombre</sexo>
+            <estudios>
+                <carrera codigo="c03"/>
+                <asignaturas>
+                    <asignatura codigo="a05"/>
+                </asignaturas>
+            </estudios>
+        </alumno>
+	
+	<alumno id="e04" beca="si">
+            <apellido1>Santos</apellido1>
+            <apellido2>Santos</apellido2>
+            <nombre>Ana</nombre>
+            <sexo>Mujer</sexo>
+            <estudios>
+                <carrera codigo="c02"/>
+                <asignaturas>
+                    <asignatura codigo="a03"/>
+                </asignaturas>
+            </estudios>
+        </alumno>
+    </alumnos>
+</universidad>
